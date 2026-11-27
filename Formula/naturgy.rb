@@ -117,6 +117,18 @@ class Naturgy < Formula
     venv.pip_install_and_link buildpath
   end
 
+  def caveats
+    <<~EOS
+      To ask an agent (Claude Code, Codex, ...) about your bills, install the skill this CLI ships:
+
+        mkdir -p ~/.claude/skills/naturgy
+        curl -fsSL https://raw.githubusercontent.com/Jotis86/naturgy_cli/main/skills/naturgy/SKILL.md -o ~/.claude/skills/naturgy/SKILL.md
+
+      Sign in yourself with `naturgy auth login`; the agent reuses that session and the skill
+      forbids it from filing claims or dumping raw personal data.
+    EOS
+  end
+
   test do
     assert_match version.to_s, shell_output("#{bin}/naturgy --version")
     assert_match "Usage: naturgy", shell_output("#{bin}/naturgy --help")
