@@ -3,8 +3,8 @@ class Naturgy < Formula
 
   desc "JSON-first CLI for your own Naturgy España account"
   homepage "https://github.com/Jotis86/naturgy_cli"
-  url "https://files.pythonhosted.org/packages/63/0c/d5aeec70822a4593cd726b72762cab19e9bf3ffbf8c1aa553173eb3095ae/naturgy_cli-0.1.0.tar.gz"
-  sha256 "5cebbfe6638fdd3905e1def8a3d1b65d31011e5f5bb2348df85b0371dfeee52c"
+  url "https://files.pythonhosted.org/packages/55/f8/a200544ad0f5f01eaba6658977d990276d687a3062aeaf1cd9bbe4d9623c/naturgy_cli-0.1.1.tar.gz"
+  sha256 "3f4ac7a578d1fe59646537cc60771aca90008e55fe0a6a37e45c906ed5fb51d7"
   license "MIT"
 
   depends_on "maturin" => :build
